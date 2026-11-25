@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 
+// Stores the personal information of each student.
 class Student
 {
     public string StudentNumber { get; set; }
@@ -30,6 +31,7 @@ class Student
 
 class Phonebook
 {
+    // List where all student records are stored.
     private List<Student> students = new List<Student>();
 
     public void AddStudent(Student student)
@@ -37,6 +39,7 @@ class Phonebook
         students.Add(student);
     }
 
+    // Searches for a student using their student number.
     public Student? FindStudent(string studentNumber)
     {
         int index = 0;
@@ -54,6 +57,7 @@ class Phonebook
         return null;
     }
 
+    // Allows the user to update an existing student record.
     public void EditStudent(Student student)
     {
         string choice = "";
@@ -125,6 +129,7 @@ class Phonebook
         }
     }
 
+    // Searches students by selected countries.
     public void SearchByCountry()
     {
         bool[] selectedCountries = new bool[5];
